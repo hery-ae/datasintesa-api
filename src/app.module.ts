@@ -10,8 +10,8 @@ import { DataModule } from './data/data.module'
             (process.env.DB_URL || 'mongodb://localhost:27017'),
             {
                 auth: {
-                    username: (process.env.DB_USERNAME || 'mongo'),
-                    password: (process.env.DB_PASSWORD || '')
+                    username: (process.env.DB_USERNAME || 'admin'),
+                    password: (process.env.DB_PASSWORD || '1234')
                 },
                 dbName: (process.env.DB_NAME || 'datasintesa')
             }

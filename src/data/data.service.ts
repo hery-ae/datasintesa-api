@@ -57,30 +57,21 @@ export class DataService {
         )
     }
 
-    findMany(enodebId: number, cellId: number, startDate: string, endDate: string): Promise<Data[]> {
-        type where = {
-            enodeb_id?: number,
-            cell_id?: number,
-            result_time?: any
-        }
-
-        const where: where = {}
-
-        if (enodebId) where.enodeb_id = enodebId
-
-        if (cellId) where.cell_id = cellId
-
-        if (startDate) where.result_time = { $gt: startDate }
-
-        if (endDate) where.result_time = Object.assign((where.result_time || {}), { $lt: endDate })
-
+    findMany(where: Where, length: number, sort: any): Promise<Data[]> {
         return (
             this.dataModel
             .where(
                 where
             )
-            .limit(100)
+            .limit(length)
+            .sort(sort)
             .exec()
         )
     }
+}
+
+interface Where {
+    enodeb_id?: number,
+    cell_id?: number,
+    result_time?: any
 }

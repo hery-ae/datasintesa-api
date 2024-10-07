@@ -1,18 +1,18 @@
 export class DataDto {
-    resultTime!: string
-    granularityPeriod!: string
-    objectName!: string
-    enodebId!: number
-    cellId!: number
-    reliability!: string
-    lCellAvailDur!: string
-    lCellUnavailDurEnergySaving!: string
-    lCellUnavailDurManual!: string
-    lCellUnavailDurSys!: string
-    lCellUnavailDurSysS1Fail!: string
-    lVoiceE2EVQIAcceptTimes!: number
-    lVoiceE2EVQIBadTimes!: number
-    lVoiceE2EVQIExcellentTimes!: number
-    lVoiceE2EVQIGoodTimes!: number
-    lVoiceE2EVQIPoorTimes!: number
+    declare resultTime: string
+    declare granularityPeriod: string
+    declare objectName: string
+    declare enodebId: number
+    declare cellId: number
+    declare reliability: string
+    declare lCellAvailDur: string
+    declare lCellUnavailDurEnergySaving: string
+    declare lCellUnavailDurManual: string
+    declare lCellUnavailDurSys: string
+    declare lCellUnavailDurSysS1Fail: string
+    declare lVoiceE2EVQIAcceptTimes: number
+    declare lVoiceE2EVQIBadTimes: number
+    declare lVoiceE2EVQIExcellentTimes: number
+    declare lVoiceE2EVQIGoodTimes: number
+    declare lVoiceE2EVQIPoorTimes: number
 }
